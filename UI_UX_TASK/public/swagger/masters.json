@@ -1,0 +1,65 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "LOTTERY",
+        "contact": {},
+        "version": "v1"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:2023/lottery/v1/api",
+            "description": "Local"
+        },
+        {
+            "url": "https://qa-api.lottery.org/lottery/v1/api",
+            "description": "QA"
+        }
+    ],
+    "security": [
+        {
+            "Authorization": [],
+            "token": []
+        }
+    ],
+    "tags": [
+        {
+            "name": "Masters API's"
+        }
+    ],
+    "paths": {
+        "/masters/getLotteryMasters": {
+            "get": {
+                "tags": [
+                    "Masters API's"
+                ],
+                "summary": "Get Lottery Masters",
+                "operationId": "GetLotteryMastersData",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "deprecated": false
+            }
+        }
+       
+    },
+    "components": {
+        "schemas": {
+            
+        },
+        "securitySchemes": {
+            "Authorization": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "authorization"
+            },
+            "token": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "token"
+            }
+        }
+    }
+}

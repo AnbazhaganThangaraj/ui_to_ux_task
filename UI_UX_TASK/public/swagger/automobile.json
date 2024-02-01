@@ -1,0 +1,90 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "AUTOMOBILE",
+        "contact": {},
+        "version": "v1"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:2024/automobile/v1/api",
+            "description": "Local"
+        }
+    ],
+    "security": [
+        {
+            "Authorization": [],
+            "token": []
+        }
+    ],
+    "tags": [
+        {
+            "name": "AUTOMOBILE API's"
+        }
+    ],
+    "paths": {
+        "/automobile/getHomepageDetails": {
+            "get": {
+                "tags": [
+                    "AUTOMOBILE API's"
+                ],
+                "summary": "Get Homepage Details",
+                "operationId": "GetHomepageDetailsData",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/automobile/featuredProducts": {
+            "get": {
+                "tags": [
+                    "AUTOMOBILE API's"
+                ],
+                "summary": "Get Featured Product Details",
+                "operationId": "GetFeaturedProductData",
+                "parameters": [
+                    {
+                        "name": "categoryId",
+                        "in": "query",
+                        "required": false,
+                        "style": "form",
+                        "explode": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32",
+                            "example": 1
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "deprecated": false
+            }
+        }
+       
+    },
+    "components": {
+        "schemas": {
+            
+        },
+        "securitySchemes": {
+            "Authorization": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "authorization"
+            },
+            "token": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "token"
+            }
+        }
+    }
+}
