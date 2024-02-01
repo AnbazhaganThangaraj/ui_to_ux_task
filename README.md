@@ -10,3 +10,20 @@ Steps to be followed for Project setup:
 
 5. Provide Authorization (apiKey) - **416f786b666b4e6f6b784d6b676f79** which is present in .env file for API access. Also add a dummy token to execute the API
 
+5. Provide Authorization (apiKey) - **416f786b666b4e6f6b784d6b676f79** which is present in .env file for API access. Also add a dummy token to execute the API.
+
+
+
+Create a .env file and add the below details:
+
+# DEFAULTS
+NODE_ENV=localdev
+PORT=2024
+API_ENCRYPT=false
+
+DB_USERNAME=admin
+DB_PASSWORD=
+DB_NAME=AUTOMOBILE
+DB_HOST=localhost
+
+API_AUTH_KEY=416f786b666b4e6f6b784d6b676f79
