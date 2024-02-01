@@ -1,6 +1,6 @@
 Steps to be followed for Project setup:
 
-1. npm install command for installing the required dependencies.
+1. ```npm install``` command for installing the required dependencies.
 
 2. Create a database named AUTOMOBILE in your local Mysql DB. Execute npx sequelize-cli db:migrate command to run the migration files so that tables get created.
 
